@@ -30,14 +30,15 @@ class BookList extends Component {
 }
 
 function mapStateToProps(state) {
-  // whatever is return from here will show up as props
+  // whatever is returned from here will show up as props
   // inside the container (BookList)
   return {
-    books: state.books,
+    books: state.books
   }
 }
 
-// Anything returned form this function will end up as props on the BookList container
+// Anything returned form this function will end up as props 
+// on the BookList container
 function mapDispatchToProps(dispatch) {
   // Whenever selectBook is called, the result should be passed to all
   // of our reducers
@@ -45,6 +46,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 // Promote BookList from a component to a container - it needs 
-// to know about this new dispatch method, selectBook.  Make it available
-// as a prop.
+// to know about this new dispatch method, selectBook.  
+// Make it available as a prop.
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);
